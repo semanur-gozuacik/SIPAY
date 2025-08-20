@@ -1,0 +1,2101 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script>
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<title>Cucumber Reports  - Feature: Lead Cases</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+        <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation" ><a href="overview-steps.html">Steps</a></li>
+        <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>Semaaa</td>
+      <td>20 Aug 2025, 12:54</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+  </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Feature Report</h2>
+  </div>
+</div>
+
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table class="stats-table">
+
+
+<thead>
+  <tr class="header dont-sort">
+      <th></th>
+    <th colspan="6">Steps</th>
+    <th colspan="3">Scenarios</th>
+    <th colspan="2">Features</th>
+  </tr>
+  <tr>
+    <th>Feature</th>
+    <th class="passed">Passed</th>
+    <th class="failed">Failed</th>
+    <th class="skipped">Skipped</th>
+    <th class="pending">Pending</th>
+    <th class="undefined">Undefined</th>
+    <th class="total">Total</th>
+
+    <th class="passed">Passed</th>
+    <th class="failed">Failed</th>
+    <th class="total">Total</th>
+
+    <th>Duration</th>
+    <th>Status</th>
+  </tr>
+</thead>
+
+
+        <tbody>
+        <tr>
+          <td class="tagname">Lead Cases</td>
+          <td      class="passed"    >37</td>
+          <td      class="failed"    >1</td>
+          <td     class="skipped"   >3</td>
+          <td >0</td>
+          <td >0</td>
+          <td class="total">41</td>
+
+          <td  class="passed"    >3</td>
+          <td  class="failed"    >1</td>
+          <td class="total">4</td>
+
+          <td class="duration" data-value="266570875600">4:26.570</td>
+          <td class="failed">Failed</td>
+        </tr>
+        </tbody>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-1 col-md-offset-10">
+      <i class="fa fa-chevron-circle-down fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('show')"></i>
+      <i class="fa fa-chevron-circle-up fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('hide')"></i>
+    </div>
+  </div>
+</div>
+
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <div class="feature">
+
+<div class="tags indention">
+    <b>Tags:</b>
+       <a href="report-tag_2149504379.html">@spy</a>
+</div>
+
+
+<div class="brief failed">
+  <span class="keyword indention">Feature</span>
+  <span class="name">Lead Cases</span>
+
+
+</div>
+
+        <div class="description indention"></div>
+
+        <div class="elements inner-level">
+
+<div class="element">
+
+
+<div class="tags indention">
+</div>
+
+
+  <span class="lead-duration duration">2.394</span>
+
+
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-1">
+
+<div class="brief passed">
+  <span class="keyword indention">Background</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-1" class="collapse collapsable-details ">
+
+
+
+
+
+<div class="steps inner-level">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-2">
+
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </div>
+
+  <div id="steps-2" class="inner-level collapse collapsable-details ">
+      <div class="step">
+
+
+<div class="brief step-name-Given passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">The user go to <span class="argument">'test-app'</span> environment</span>
+
+  <span class="lead-duration duration">0.425</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Given passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">The user login</span>
+
+  <span class="lead-duration duration">1.968</span>
+
+</div>
+
+
+
+
+
+
+
+          <table class="step-arguments">
+              <tr>
+                  <td>username</td>
+                  <td>TestSipay</td>
+              </tr>
+              <tr>
+                  <td>password</td>
+                  <td>Sipay2025</td>
+              </tr>
+          </table>
+
+
+
+
+
+
+
+
+
+      </div>
+  </div>
+</div>
+
+
+
+
+
+  </div>
+</div>
+
+
+<div class="element">
+
+
+<div class="tags indention">
+    <b>Tags:</b>
+       <a href="report-tag_2149504379.html">@spy</a>
+</div>
+
+
+  <span class="lead-duration duration">9.955</span>
+
+
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-3">
+
+<div class="brief passed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">Lead Empty Required Area Control On Submit Form</span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-3" class="collapse collapsable-details ">
+
+
+  <div class="inner-level hooks-element-before">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-4">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="before-4" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">Before</span>
+              <span class="location name">Efectura.stepDefs.Hooks.setup(io.cucumber.java.Scenario)</span>
+
+  <span class="lead-duration duration">0.959</span>
+
+          </div>
+
+
+
+
+
+
+
+        </div>
+    </div>
+  </div>
+
+
+
+<div class="steps inner-level">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-5">
+
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </div>
+
+  <div id="steps-5" class="inner-level collapse collapsable-details ">
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">The user select <span class="argument">'Prospect'</span> in deal status filter</span>
+
+  <span class="lead-duration duration">1.351</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">The user click related record button at row <span class="argument">1</span></span>
+
+  <span class="lead-duration duration">0.076</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">The user go to other tab</span>
+
+  <span class="lead-duration duration">3.028</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">The user verify <span class="argument">'Lead Formu'</span> form is open</span>
+
+  <span class="lead-duration duration">2.029</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">The user click <span class="argument">'Tamamla'</span> button</span>
+
+  <span class="lead-duration duration">2.425</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">The user verify warning <span class="argument">'L&uuml;tfen t&uuml;m zorunlu alanlar&#305; doldurun'</span></span>
+
+  <span class="lead-duration duration">1.044</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+  </div>
+</div>
+
+
+
+
+  <div class="inner-level hooks-element-after">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-6">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="after-6" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+              <span class="location name">Efectura.stepDefs.Hooks.tearDown(io.cucumber.java.Scenario)</span>
+
+  <span class="lead-duration duration">1.790</span>
+
+          </div>
+
+
+
+
+
+
+
+        </div>
+    </div>
+  </div>
+
+  </div>
+</div>
+
+
+<div class="element">
+
+
+<div class="tags indention">
+</div>
+
+
+  <span class="lead-duration duration">2.355</span>
+
+
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-7">
+
+<div class="brief passed">
+  <span class="keyword indention">Background</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-7" class="collapse collapsable-details ">
+
+
+
+
+
+<div class="steps inner-level">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-8">
+
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </div>
+
+  <div id="steps-8" class="inner-level collapse collapsable-details ">
+      <div class="step">
+
+
+<div class="brief step-name-Given passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">The user go to <span class="argument">'test-app'</span> environment</span>
+
+  <span class="lead-duration duration">0.429</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Given passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">The user login</span>
+
+  <span class="lead-duration duration">1.926</span>
+
+</div>
+
+
+
+
+
+
+
+          <table class="step-arguments">
+              <tr>
+                  <td>username</td>
+                  <td>TestSipay</td>
+              </tr>
+              <tr>
+                  <td>password</td>
+                  <td>Sipay2025</td>
+              </tr>
+          </table>
+
+
+
+
+
+
+
+
+
+      </div>
+  </div>
+</div>
+
+
+
+
+
+  </div>
+</div>
+
+
+<div class="element">
+
+
+<div class="tags indention">
+    <b>Tags:</b>
+       <a href="report-tag_2149504379.html">@spy</a>
+</div>
+
+
+  <span class="lead-duration duration">1:19.070</span>
+
+
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-9">
+
+<div class="brief passed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">Lead &Uuml;r&uuml;n Selection For Extra Attributes</span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-9" class="collapse collapsable-details ">
+
+
+  <div class="inner-level hooks-element-before">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-10">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="before-10" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">Before</span>
+              <span class="location name">Efectura.stepDefs.Hooks.setup(io.cucumber.java.Scenario)</span>
+
+  <span class="lead-duration duration">0.670</span>
+
+          </div>
+
+
+
+
+
+
+
+        </div>
+    </div>
+  </div>
+
+
+
+<div class="steps inner-level">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-11">
+
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </div>
+
+  <div id="steps-11" class="inner-level collapse collapsable-details ">
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">The user select <span class="argument">'Prospect'</span> in deal status filter</span>
+
+  <span class="lead-duration duration">1.380</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">The user click related record button at row <span class="argument">1</span></span>
+
+  <span class="lead-duration duration">0.089</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">The user go to other tab</span>
+
+  <span class="lead-duration duration">3.015</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">The user verify <span class="argument">'Lead Formu'</span> form is open</span>
+
+  <span class="lead-duration duration">2.020</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">The user select <span class="argument">'Manuel POS'</span> in <span class="argument">'product'</span></span>
+
+  <span class="lead-duration duration">10.519</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">The user verify other attributes display</span>
+
+  <span class="lead-duration duration">0.092</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">The user select <span class="argument">'Linkle &Ouml;deme'</span> in <span class="argument">'product'</span></span>
+
+  <span class="lead-duration duration">20.430</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">The user verify other attributes display</span>
+
+  <span class="lead-duration duration">0.106</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">The user select <span class="argument">'Sanal POS'</span> in <span class="argument">'product'</span></span>
+
+  <span class="lead-duration duration">20.537</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">The user verify other attributes display</span>
+
+  <span class="lead-duration duration">0.091</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">The user select <span class="argument">'Fiziki POS'</span> in <span class="argument">'product'</span></span>
+
+  <span class="lead-duration duration">20.613</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">The user verify other attributes display</span>
+
+  <span class="lead-duration duration">0.173</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+  </div>
+</div>
+
+
+
+
+  <div class="inner-level hooks-element-after">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-12">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="after-12" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+              <span class="location name">Efectura.stepDefs.Hooks.tearDown(io.cucumber.java.Scenario)</span>
+
+  <span class="lead-duration duration">1.758</span>
+
+          </div>
+
+
+
+
+
+
+
+        </div>
+    </div>
+  </div>
+
+  </div>
+</div>
+
+
+<div class="element">
+
+
+<div class="tags indention">
+</div>
+
+
+  <span class="lead-duration duration">2.277</span>
+
+
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-13">
+
+<div class="brief passed">
+  <span class="keyword indention">Background</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-13" class="collapse collapsable-details ">
+
+
+
+
+
+<div class="steps inner-level">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-14">
+
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </div>
+
+  <div id="steps-14" class="inner-level collapse collapsable-details ">
+      <div class="step">
+
+
+<div class="brief step-name-Given passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">The user go to <span class="argument">'test-app'</span> environment</span>
+
+  <span class="lead-duration duration">0.426</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Given passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">The user login</span>
+
+  <span class="lead-duration duration">1.851</span>
+
+</div>
+
+
+
+
+
+
+
+          <table class="step-arguments">
+              <tr>
+                  <td>username</td>
+                  <td>TestSipay</td>
+              </tr>
+              <tr>
+                  <td>password</td>
+                  <td>Sipay2025</td>
+              </tr>
+          </table>
+
+
+
+
+
+
+
+
+
+      </div>
+  </div>
+</div>
+
+
+
+
+
+  </div>
+</div>
+
+
+<div class="element">
+
+
+<div class="tags indention">
+    <b>Tags:</b>
+       <a href="report-tag_2149504379.html">@spy</a>
+</div>
+
+
+  <span class="lead-duration duration">1:49.190</span>
+
+
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-15">
+
+<div class="brief failed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">Lead Form Complete Case</span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-15" class="collapse collapsable-details  in ">
+
+
+  <div class="inner-level hooks-element-before">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-16">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="before-16" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">Before</span>
+              <span class="location name">Efectura.stepDefs.Hooks.setup(io.cucumber.java.Scenario)</span>
+
+  <span class="lead-duration duration">0.766</span>
+
+          </div>
+
+
+
+
+
+
+
+        </div>
+    </div>
+  </div>
+
+
+
+<div class="steps inner-level">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-17">
+
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </div>
+
+  <div id="steps-17" class="inner-level collapse collapsable-details  in ">
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">The user go to <span class="argument">'Prospect'</span> on navbar</span>
+
+  <span class="lead-duration duration">0.072</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">The user fill the prospect form</span>
+
+  <span class="lead-duration duration">1:42.792</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">The user click <span class="argument">'Tamamla'</span> button</span>
+
+  <span class="lead-duration duration">2.214</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">The user verify <span class="argument">'Lead Formu'</span> form is open</span>
+
+  <span class="lead-duration duration">2.042</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When failed">
+  <span class="keyword indention">When</span>
+  <span class="name">The user select <span class="argument">'Fiziki POS'</span> in <span class="argument">'product'</span></span>
+
+  <span class="lead-duration duration">2.067</span>
+
+</div>
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-18">
+          <a>org.openqa.selenium.TimeoutException:</a>
+      </div>
+      <div id="msg-18" class="collapse collapsable-details  in ">
+        <pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on WINDOWS (3a0e4e78e18a65d0ff26489b89852832)] -&gt; id: product] (tried for 2 second(s) with 100 milliseconds interval)
+Build info: version: '4.8.1', revision: '8ebccac989'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.14'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.128, chrome: {chromedriverVersion: 139.0.7258.138 (884e54ea8d4..., userDataDir: C:\Users\semag\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57954}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:57954/devtoo..., se:cdpVersion: 139.0.7258.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 3a0e4e78e18a65d0ff26489b89852832
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at Efectura.utilities.SelectFilterUtils.choose(SelectFilterUtils.java:46)
+	at Efectura.stepDefs.SearchStepDefs.theUserSelectOptionInSelectElement(SearchStepDefs.java:405)
+	at &#10045;.The user select 'Fiziki POS' in 'product'(file:///C:/Users/semag/Downloads/Telegram%20Desktop/SipayTestAutomation/SipayTestAutomation/src/test/resources/features/2-lead.feature:61)
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When skipped">
+  <span class="keyword indention">When</span>
+  <span class="name">The user fill the lead form</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When skipped">
+  <span class="keyword indention">When</span>
+  <span class="name">The user click <span class="argument">'Tamamla'</span> button</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">The user verify <span class="argument">'Pitched Kay&#305;t Formu'</span> form is open</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+  </div>
+</div>
+
+
+
+
+  <div class="inner-level hooks-element-after">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-19">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="after-19" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+              <span class="location name">Efectura.stepDefs.Hooks.tearDown(io.cucumber.java.Scenario)</span>
+
+  <span class="lead-duration duration">1.912</span>
+
+          </div>
+
+
+
+
+
+
+  <div class="embeddings inner-level">
+  <div class="embedding indention">
+    <div data-toggle="collapse" data-target="#embedding-20" class="collapsable-control">
+      <a>Lead Form Complete Case</a>
+      <a href="embeddings/embedding_-1925159125.png" download target="_blank">
+        <span class="download-button glyphicon glyphicon-download-alt"></span>
+      </a>
+    </div>
+    <div id="embedding-20" class="collapse collapsable-details ">
+      <div class="embedding-content">
+        <img src="embeddings/embedding_-1925159125.png">
+      </div>
+    </div>
+  </div>
+  </div>
+
+        </div>
+    </div>
+  </div>
+
+  </div>
+</div>
+
+
+<div class="element">
+
+
+<div class="tags indention">
+</div>
+
+
+  <span class="lead-duration duration">2.082</span>
+
+
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-21">
+
+<div class="brief passed">
+  <span class="keyword indention">Background</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-21" class="collapse collapsable-details ">
+
+
+
+
+
+<div class="steps inner-level">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-22">
+
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </div>
+
+  <div id="steps-22" class="inner-level collapse collapsable-details ">
+      <div class="step">
+
+
+<div class="brief step-name-Given passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">The user go to <span class="argument">'test-app'</span> environment</span>
+
+  <span class="lead-duration duration">0.361</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Given passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">The user login</span>
+
+  <span class="lead-duration duration">1.721</span>
+
+</div>
+
+
+
+
+
+
+
+          <table class="step-arguments">
+              <tr>
+                  <td>username</td>
+                  <td>TestSipay</td>
+              </tr>
+              <tr>
+                  <td>password</td>
+                  <td>Sipay2025</td>
+              </tr>
+          </table>
+
+
+
+
+
+
+
+
+
+      </div>
+  </div>
+</div>
+
+
+
+
+
+  </div>
+</div>
+
+
+<div class="element">
+
+
+<div class="tags indention">
+    <b>Tags:</b>
+       <a href="report-tag_2149504379.html">@spy</a>
+</div>
+
+
+  <span class="lead-duration duration">59.243</span>
+
+
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-23">
+
+<div class="brief passed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">Lead Form Clear Button Control</span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-23" class="collapse collapsable-details ">
+
+
+  <div class="inner-level hooks-element-before">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-24">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="before-24" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">Before</span>
+              <span class="location name">Efectura.stepDefs.Hooks.setup(io.cucumber.java.Scenario)</span>
+
+  <span class="lead-duration duration">0.784</span>
+
+          </div>
+
+
+
+
+
+
+
+        </div>
+    </div>
+  </div>
+
+
+
+<div class="steps inner-level">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-25">
+
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </div>
+
+  <div id="steps-25" class="inner-level collapse collapsable-details ">
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">The user select <span class="argument">'Prospect'</span> in deal status filter</span>
+
+  <span class="lead-duration duration">10.778</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">The user click related record button at row <span class="argument">1</span></span>
+
+  <span class="lead-duration duration">0.056</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">The user go to other tab</span>
+
+  <span class="lead-duration duration">3.024</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">The user verify <span class="argument">'Lead Formu'</span> form is open</span>
+
+  <span class="lead-duration duration">2.026</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">The user fill the lead form</span>
+
+  <span class="lead-duration duration">41.100</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">The user click <span class="argument">'Temizle'</span> button</span>
+
+  <span class="lead-duration duration">2.155</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">The user verify form inputs clear</span>
+
+  <span class="lead-duration duration">0.101</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+  </div>
+</div>
+
+
+
+
+  <div class="inner-level hooks-element-after">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-26">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="after-26" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+              <span class="location name">Efectura.stepDefs.Hooks.tearDown(io.cucumber.java.Scenario)</span>
+
+  <span class="lead-duration duration">1.690</span>
+
+          </div>
+
+
+
+
+
+
+
+        </div>
+    </div>
+  </div>
+
+  </div>
+</div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-1 col-md-offset-10">
+      <i class="fa fa-chevron-circle-down fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('show')"></i>
+      <i class="fa fa-chevron-circle-up fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('hide')"></i>
+    </div>
+  </div>
+</div>
+
+<br/>
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>

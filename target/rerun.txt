@@ -1,0 +1,6 @@
+file:src/test/resources/features/5-onboardingOperation.feature:19
+file:src/test/resources/features/3-contract.feature:53
+file:src/test/resources/features/searchPage.feature:22:34:39:45
+file:src/test/resources/features/1-prospect.feature:15:31
+file:src/test/resources/features/assignedRecords.feature:14:25:36:61:66:73:80
+file:src/test/resources/features/2-lead.feature:56

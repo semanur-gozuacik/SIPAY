@@ -1,0 +1,5585 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script>
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<title>Cucumber Reports  - Failures Overview</title>
+
+</head>
+
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+        <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation" ><a href="overview-steps.html">Steps</a></li>
+        <li role="presentation"  class="active" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>Semaaa</td>
+      <td>20 Aug 2025, 12:54</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+  </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Failures Overview</h2>
+      <p>The following summary displays scenarios that failed.</p>
+  </div>
+</div>
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-1 col-md-offset-10">
+      <i class="fa fa-chevron-circle-down fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('show')"></i>
+      <i class="fa fa-chevron-circle-up fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('hide')"></i>
+    </div>
+  </div>
+</div>
+
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+
+        <div class="elements">
+
+<div class="element">
+    <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_590813155.html">Prospect Cases</a>
+    </div>
+
+
+<div class="tags indention">
+</div>
+
+
+  <span class="lead-duration duration">2.479</span>
+
+
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-1">
+
+<div class="brief failed">
+  <span class="keyword indention">Background</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-1" class="collapse collapsable-details  in ">
+
+
+
+
+
+<div class="steps inner-level">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-2">
+
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </div>
+
+  <div id="steps-2" class="inner-level collapse collapsable-details  in ">
+      <div class="step">
+
+
+<div class="brief step-name-Given passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">The user go to <span class="argument">'test-app'</span> environment</span>
+
+  <span class="lead-duration duration">0.125</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Given failed">
+  <span class="keyword indention">Given</span>
+  <span class="name">The user login</span>
+
+  <span class="lead-duration duration">2.354</span>
+
+</div>
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-3">
+          <a>org.openqa.selenium.ElementClickInterceptedException:</a>
+      </div>
+      <div id="msg-3" class="collapse collapsable-details  in ">
+        <pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;button class=&quot;Toastify__close-button Toastify__close-button--light&quot; type=&quot;button&quot; aria-label=&quot;close&quot;&gt;...&lt;/button&gt; is not clickable at point (1494, 30). Other element would receive the click: &lt;div id=&quot;1&quot; tabindex=&quot;0&quot; data-in=&quot;true&quot; class=&quot;Toastify__toast Toastify__toast-theme--light Toastify__toast--success Toastify__toast--close-on-click&quot; role=&quot;alert&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=139.0.7258.128)
+Build info: version: '4.8.1', revision: '8ebccac989'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.14'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [fef582117d51c465c573de44e557943d, clickElement {id=f.84F5E796CBDEF7854537DAFBFDC6E04F.d.A9EDD70C012556573CF814A457A852D6.e.28}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.128, chrome: {chromedriverVersion: 139.0.7258.138 (884e54ea8d4..., userDataDir: C:\Users\semag\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57744}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:57744/devtoo..., se:cdpVersion: 139.0.7258.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (fef582117d51c465c573de44e557943d)] -&gt; xpath: /html/body/div/div/main/section/div/div/button]
+Session ID: fef582117d51c465c573de44e557943d
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
+	at jdk.proxy2/jdk.proxy2.$Proxy25.click(Unknown Source)
+	at Efectura.stepDefs.GeneralStepDefs.theUserLogin(GeneralStepDefs.java:32)
+	at &#10045;.The user login(file:///C:/Users/semag/Downloads/Telegram%20Desktop/SipayTestAutomation/SipayTestAutomation/src/test/resources/features/1-prospect.feature:6)
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+          <table class="step-arguments">
+              <tr>
+                  <td>username</td>
+                  <td>TestSipay</td>
+              </tr>
+              <tr>
+                  <td>password</td>
+                  <td>Sipay2025</td>
+              </tr>
+          </table>
+
+
+
+
+
+
+
+
+
+      </div>
+  </div>
+</div>
+
+
+
+
+
+  </div>
+</div>
+
+
+<div class="element">
+    <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_590813155.html">Prospect Cases</a>
+    </div>
+
+
+<div class="tags indention">
+    <b>Tags:</b>
+       <a href="report-tag_2149504379.html">@spy</a>
+</div>
+
+
+  <span class="lead-duration duration">0.000</span>
+
+
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-4">
+
+<div class="brief failed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">Prospect Partial Empty Required Area Control On Submit Form</span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-4" class="collapse collapsable-details  in ">
+
+
+  <div class="inner-level hooks-element-before">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-5">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="before-5" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">Before</span>
+              <span class="location name">Efectura.stepDefs.Hooks.setup(io.cucumber.java.Scenario)</span>
+
+  <span class="lead-duration duration">1.034</span>
+
+          </div>
+
+
+
+
+
+
+
+        </div>
+    </div>
+  </div>
+
+
+
+<div class="steps inner-level">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-6">
+
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </div>
+
+  <div id="steps-6" class="inner-level collapse collapsable-details  in ">
+      <div class="step">
+
+
+<div class="brief step-name-When skipped">
+  <span class="keyword indention">When</span>
+  <span class="name">The user go to <span class="argument">'Prospect'</span> on navbar</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When skipped">
+  <span class="keyword indention">When</span>
+  <span class="name">The user fill the form partially</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When skipped">
+  <span class="keyword indention">When</span>
+  <span class="name">The user click <span class="argument">'Tamamla'</span> button</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">The user verify warning <span class="argument">'L&uuml;tfen t&uuml;m zorunlu alanlar&#305; doldurun'</span></span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+  </div>
+</div>
+
+
+
+
+  <div class="inner-level hooks-element-after">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-7">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="after-7" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+              <span class="location name">Efectura.stepDefs.Hooks.tearDown(io.cucumber.java.Scenario)</span>
+
+  <span class="lead-duration duration">2.094</span>
+
+          </div>
+
+
+
+
+
+
+  <div class="embeddings inner-level">
+  <div class="embedding indention">
+    <div data-toggle="collapse" data-target="#embedding-8" class="collapsable-control">
+      <a>Prospect Partial Empty Required Area Control On Submit Form</a>
+      <a href="embeddings/embedding_-1830576485.png" download target="_blank">
+        <span class="download-button glyphicon glyphicon-download-alt"></span>
+      </a>
+    </div>
+    <div id="embedding-8" class="collapse collapsable-details ">
+      <div class="embedding-content">
+        <img src="embeddings/embedding_-1830576485.png">
+      </div>
+    </div>
+  </div>
+  </div>
+
+        </div>
+    </div>
+  </div>
+
+  </div>
+</div>
+
+
+<div class="element">
+    <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_590813155.html">Prospect Cases</a>
+    </div>
+
+
+<div class="tags indention">
+</div>
+
+
+  <span class="lead-duration duration">5.597</span>
+
+
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-9">
+
+<div class="brief failed">
+  <span class="keyword indention">Background</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-9" class="collapse collapsable-details  in ">
+
+
+
+
+
+<div class="steps inner-level">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-10">
+
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </div>
+
+  <div id="steps-10" class="inner-level collapse collapsable-details  in ">
+      <div class="step">
+
+
+<div class="brief step-name-Given passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">The user go to <span class="argument">'test-app'</span> environment</span>
+
+  <span class="lead-duration duration">0.476</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Given failed">
+  <span class="keyword indention">Given</span>
+  <span class="name">The user login</span>
+
+  <span class="lead-duration duration">5.120</span>
+
+</div>
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-11">
+          <a>org.openqa.selenium.ElementClickInterceptedException:</a>
+      </div>
+      <div id="msg-11" class="collapse collapsable-details  in ">
+        <pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;button class=&quot;Toastify__close-button Toastify__close-button--light&quot; type=&quot;button&quot; aria-label=&quot;close&quot;&gt;...&lt;/button&gt; is not clickable at point (1495, 30). Other element would receive the click: &lt;div id=&quot;1&quot; tabindex=&quot;0&quot; data-in=&quot;true&quot; class=&quot;Toastify__toast Toastify__toast-theme--light Toastify__toast--success Toastify__toast--close-on-click&quot; role=&quot;alert&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=139.0.7258.128)
+Build info: version: '4.8.1', revision: '8ebccac989'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.14'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [fd84db12c017ecdd09820090e8d61c81, clickElement {id=f.B06BCADB5D9A28A2E93DDCA9A7A7370C.d.F034E4C1359F682F0E3F86988499B704.e.27}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.128, chrome: {chromedriverVersion: 139.0.7258.138 (884e54ea8d4..., userDataDir: C:\Users\semag\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57818}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:57818/devtoo..., se:cdpVersion: 139.0.7258.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (fd84db12c017ecdd09820090e8d61c81)] -&gt; xpath: /html/body/div/div/main/section/div/div/button]
+Session ID: fd84db12c017ecdd09820090e8d61c81
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
+	at jdk.proxy2/jdk.proxy2.$Proxy25.click(Unknown Source)
+	at Efectura.stepDefs.GeneralStepDefs.theUserLogin(GeneralStepDefs.java:32)
+	at &#10045;.The user login(file:///C:/Users/semag/Downloads/Telegram%20Desktop/SipayTestAutomation/SipayTestAutomation/src/test/resources/features/1-prospect.feature:6)
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+          <table class="step-arguments">
+              <tr>
+                  <td>username</td>
+                  <td>TestSipay</td>
+              </tr>
+              <tr>
+                  <td>password</td>
+                  <td>Sipay2025</td>
+              </tr>
+          </table>
+
+
+
+
+
+
+
+
+
+      </div>
+  </div>
+</div>
+
+
+
+
+
+  </div>
+</div>
+
+
+<div class="element">
+    <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_590813155.html">Prospect Cases</a>
+    </div>
+
+
+<div class="tags indention">
+    <b>Tags:</b>
+       <a href="report-tag_2149504379.html">@spy</a>
+</div>
+
+
+  <span class="lead-duration duration">0.001</span>
+
+
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-12">
+
+<div class="brief failed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">Prospect Form Clear Button Control</span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-12" class="collapse collapsable-details  in ">
+
+
+  <div class="inner-level hooks-element-before">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-13">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="before-13" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">Before</span>
+              <span class="location name">Efectura.stepDefs.Hooks.setup(io.cucumber.java.Scenario)</span>
+
+  <span class="lead-duration duration">0.808</span>
+
+          </div>
+
+
+
+
+
+
+
+        </div>
+    </div>
+  </div>
+
+
+
+<div class="steps inner-level">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-14">
+
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </div>
+
+  <div id="steps-14" class="inner-level collapse collapsable-details  in ">
+      <div class="step">
+
+
+<div class="brief step-name-When skipped">
+  <span class="keyword indention">When</span>
+  <span class="name">The user go to <span class="argument">'Prospect'</span> on navbar</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When skipped">
+  <span class="keyword indention">When</span>
+  <span class="name">The user fill the prospect form</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When skipped">
+  <span class="keyword indention">When</span>
+  <span class="name">The user click <span class="argument">'Temizle'</span> button</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">The user verify form inputs clear</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+  </div>
+</div>
+
+
+
+
+  <div class="inner-level hooks-element-after">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-15">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="after-15" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+              <span class="location name">Efectura.stepDefs.Hooks.tearDown(io.cucumber.java.Scenario)</span>
+
+  <span class="lead-duration duration">1.925</span>
+
+          </div>
+
+
+
+
+
+
+  <div class="embeddings inner-level">
+  <div class="embedding indention">
+    <div data-toggle="collapse" data-target="#embedding-16" class="collapsable-control">
+      <a>Prospect Form Clear Button Control</a>
+      <a href="embeddings/embedding_-733504990.png" download target="_blank">
+        <span class="download-button glyphicon glyphicon-download-alt"></span>
+      </a>
+    </div>
+    <div id="embedding-16" class="collapse collapsable-details ">
+      <div class="embedding-content">
+        <img src="embeddings/embedding_-733504990.png">
+      </div>
+    </div>
+  </div>
+  </div>
+
+        </div>
+    </div>
+  </div>
+
+  </div>
+</div>
+
+
+<div class="element">
+    <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_1_2166351698.html">Lead Cases</a>
+    </div>
+
+
+<div class="tags indention">
+    <b>Tags:</b>
+       <a href="report-tag_2149504379.html">@spy</a>
+</div>
+
+
+  <span class="lead-duration duration">1:49.190</span>
+
+
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-17">
+
+<div class="brief failed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">Lead Form Complete Case</span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-17" class="collapse collapsable-details  in ">
+
+
+  <div class="inner-level hooks-element-before">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-18">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="before-18" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">Before</span>
+              <span class="location name">Efectura.stepDefs.Hooks.setup(io.cucumber.java.Scenario)</span>
+
+  <span class="lead-duration duration">0.766</span>
+
+          </div>
+
+
+
+
+
+
+
+        </div>
+    </div>
+  </div>
+
+
+
+<div class="steps inner-level">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-19">
+
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </div>
+
+  <div id="steps-19" class="inner-level collapse collapsable-details  in ">
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">The user go to <span class="argument">'Prospect'</span> on navbar</span>
+
+  <span class="lead-duration duration">0.072</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">The user fill the prospect form</span>
+
+  <span class="lead-duration duration">1:42.792</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">The user click <span class="argument">'Tamamla'</span> button</span>
+
+  <span class="lead-duration duration">2.214</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">The user verify <span class="argument">'Lead Formu'</span> form is open</span>
+
+  <span class="lead-duration duration">2.042</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When failed">
+  <span class="keyword indention">When</span>
+  <span class="name">The user select <span class="argument">'Fiziki POS'</span> in <span class="argument">'product'</span></span>
+
+  <span class="lead-duration duration">2.067</span>
+
+</div>
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-20">
+          <a>org.openqa.selenium.TimeoutException:</a>
+      </div>
+      <div id="msg-20" class="collapse collapsable-details  in ">
+        <pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on WINDOWS (3a0e4e78e18a65d0ff26489b89852832)] -&gt; id: product] (tried for 2 second(s) with 100 milliseconds interval)
+Build info: version: '4.8.1', revision: '8ebccac989'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.14'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.128, chrome: {chromedriverVersion: 139.0.7258.138 (884e54ea8d4..., userDataDir: C:\Users\semag\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57954}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:57954/devtoo..., se:cdpVersion: 139.0.7258.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 3a0e4e78e18a65d0ff26489b89852832
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at Efectura.utilities.SelectFilterUtils.choose(SelectFilterUtils.java:46)
+	at Efectura.stepDefs.SearchStepDefs.theUserSelectOptionInSelectElement(SearchStepDefs.java:405)
+	at &#10045;.The user select 'Fiziki POS' in 'product'(file:///C:/Users/semag/Downloads/Telegram%20Desktop/SipayTestAutomation/SipayTestAutomation/src/test/resources/features/2-lead.feature:61)
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When skipped">
+  <span class="keyword indention">When</span>
+  <span class="name">The user fill the lead form</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When skipped">
+  <span class="keyword indention">When</span>
+  <span class="name">The user click <span class="argument">'Tamamla'</span> button</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">The user verify <span class="argument">'Pitched Kay&#305;t Formu'</span> form is open</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+  </div>
+</div>
+
+
+
+
+  <div class="inner-level hooks-element-after">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-21">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="after-21" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+              <span class="location name">Efectura.stepDefs.Hooks.tearDown(io.cucumber.java.Scenario)</span>
+
+  <span class="lead-duration duration">1.912</span>
+
+          </div>
+
+
+
+
+
+
+  <div class="embeddings inner-level">
+  <div class="embedding indention">
+    <div data-toggle="collapse" data-target="#embedding-22" class="collapsable-control">
+      <a>Lead Form Complete Case</a>
+      <a href="embeddings/embedding_-1925159125.png" download target="_blank">
+        <span class="download-button glyphicon glyphicon-download-alt"></span>
+      </a>
+    </div>
+    <div id="embedding-22" class="collapse collapsable-details ">
+      <div class="embedding-content">
+        <img src="embeddings/embedding_-1925159125.png">
+      </div>
+    </div>
+  </div>
+  </div>
+
+        </div>
+    </div>
+  </div>
+
+  </div>
+</div>
+
+
+<div class="element">
+    <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_2_4074116519.html">contract form</a>
+    </div>
+
+
+<div class="tags indention">
+    <b>Tags:</b>
+       <a href="report-tag_2149504379.html">@spy</a>
+</div>
+
+
+  <span class="lead-duration duration">39.202</span>
+
+
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-23">
+
+<div class="brief failed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">Contract Complete</span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-23" class="collapse collapsable-details  in ">
+
+
+  <div class="inner-level hooks-element-before">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-24">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="before-24" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">Before</span>
+              <span class="location name">Efectura.stepDefs.Hooks.setup(io.cucumber.java.Scenario)</span>
+
+  <span class="lead-duration duration">0.808</span>
+
+          </div>
+
+
+
+
+
+
+
+        </div>
+    </div>
+  </div>
+
+
+
+<div class="steps inner-level">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-25">
+
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </div>
+
+  <div id="steps-25" class="inner-level collapse collapsable-details  in ">
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">The user select <span class="argument">'Pitched'</span> in deal status filter</span>
+
+  <span class="lead-duration duration">1.233</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">The user click related record button at row <span class="argument">0</span></span>
+
+  <span class="lead-duration duration">0.052</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">The user go to other tab</span>
+
+  <span class="lead-duration duration">3.012</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">The user verify <span class="argument">'Contracting Kay&#305;t Formu'</span> form is open</span>
+
+  <span class="lead-duration duration">2.031</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">The user select <span class="argument">'7'</span> in <span class="argument">'valorSelect'</span></span>
+
+  <span class="lead-duration duration">11.339</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">The user select <span class="argument">'Adi Ortakl&#305;k'</span> in <span class="argument">'companyType'</span></span>
+
+  <span class="lead-duration duration">20.364</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When failed">
+  <span class="keyword indention">When</span>
+  <span class="name">The user upload documents</span>
+
+  <span class="lead-duration duration">1.168</span>
+
+</div>
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-26">
+          <a>org.openqa.selenium.InvalidArgumentException:</a>
+      </div>
+      <div id="msg-26" class="collapse collapsable-details  in ">
+        <pre>org.openqa.selenium.InvalidArgumentException: invalid argument: File not found : C:\Users\fkara\Desktop\workspace\SipayTestAutomation\src\test\resources\features\searchPage.feature
+  (Session info: chrome=139.0.7258.128)
+Build info: version: '4.8.1', revision: '8ebccac989'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.14'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [93d5ee1084b76231bb2d584e87b99711, sendKeysToElement {id=f.2A2C087BD80D5C0E4BA8120FDCDC9B0C.d.A5DD29297F07113A18EA72CB28656986.e.92, value=[Ljava.lang.CharSequence;@5a85f41b}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.128, chrome: {chromedriverVersion: 139.0.7258.138 (884e54ea8d4..., userDataDir: C:\Users\semag\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58084}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58084/devtoo..., se:cdpVersion: 139.0.7258.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (93d5ee1084b76231bb2d584e87b99711)] -&gt; xpath: //input[@id='customerInfoForm']]
+Session ID: 93d5ee1084b76231bb2d584e87b99711
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:113)
+	at jdk.internal.reflect.GeneratedMethodAccessor63.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
+	at jdk.proxy2/jdk.proxy2.$Proxy25.sendKeys(Unknown Source)
+	at Efectura.stepDefs.SearchStepDefs.theUserUploadDocuments(SearchStepDefs.java:473)
+	at &#10045;.The user upload documents(file:///C:/Users/semag/Downloads/Telegram%20Desktop/SipayTestAutomation/SipayTestAutomation/src/test/resources/features/3-contract.feature:60)
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When skipped">
+  <span class="keyword indention">When</span>
+  <span class="name">The user click <span class="argument">'Tamamla'</span> button</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When skipped">
+  <span class="keyword indention">When</span>
+  <span class="name">The user wait <span class="argument">7</span> second</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">The user verify <span class="argument">'Onboarding Risk Formu'</span> form is open</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+  </div>
+</div>
+
+
+
+
+  <div class="inner-level hooks-element-after">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-27">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="after-27" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+              <span class="location name">Efectura.stepDefs.Hooks.tearDown(io.cucumber.java.Scenario)</span>
+
+  <span class="lead-duration duration">1.785</span>
+
+          </div>
+
+
+
+
+
+
+  <div class="embeddings inner-level">
+  <div class="embedding indention">
+    <div data-toggle="collapse" data-target="#embedding-28" class="collapsable-control">
+      <a>Contract Complete</a>
+      <a href="embeddings/embedding_-1120825128.png" download target="_blank">
+        <span class="download-button glyphicon glyphicon-download-alt"></span>
+      </a>
+    </div>
+    <div id="embedding-28" class="collapse collapsable-details ">
+      <div class="embedding-content">
+        <img src="embeddings/embedding_-1120825128.png">
+      </div>
+    </div>
+  </div>
+  </div>
+
+        </div>
+    </div>
+  </div>
+
+  </div>
+</div>
+
+
+<div class="element">
+    <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_4_4120225095.html">Onboarding Operation</a>
+    </div>
+
+
+<div class="tags indention">
+    <b>Tags:</b>
+       <a href="report-tag_2149504379.html">@spy</a>
+</div>
+
+
+  <span class="lead-duration duration">48.265</span>
+
+
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-29">
+
+<div class="brief failed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">Onboarding Operation Revise Reason and note</span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-29" class="collapse collapsable-details  in ">
+
+
+  <div class="inner-level hooks-element-before">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-30">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="before-30" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">Before</span>
+              <span class="location name">Efectura.stepDefs.Hooks.setup(io.cucumber.java.Scenario)</span>
+
+  <span class="lead-duration duration">0.622</span>
+
+          </div>
+
+
+
+
+
+
+
+        </div>
+    </div>
+  </div>
+
+
+
+<div class="steps inner-level">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-31">
+
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </div>
+
+  <div id="steps-31" class="inner-level collapse collapsable-details  in ">
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">The user select <span class="argument">'OnboardingRisk'</span> in deal status filter</span>
+
+  <span class="lead-duration duration">1.379</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">The user click related record button at row <span class="argument">0</span></span>
+
+  <span class="lead-duration duration">0.056</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">The user go to other tab</span>
+
+  <span class="lead-duration duration">3.025</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">The user wait <span class="argument">5</span> second</span>
+
+  <span class="lead-duration duration">5.014</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">The user verify <span class="argument">'Onboarding Operation Formu'</span> form is open</span>
+
+  <span class="lead-duration duration">2.020</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">The user select <span class="argument">'Yasakl&#305; sekt&ouml;r'</span> in <span class="argument">'reviseReasonOperation'</span></span>
+
+  <span class="lead-duration duration">20.349</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">The user enter <span class="argument">'Test notu'</span> into explanation in <span class="argument">'operation'</span></span>
+
+  <span class="lead-duration duration">0.092</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">The user click <span class="argument">'G&uuml;ncelle'</span> button</span>
+
+  <span class="lead-duration duration">2.167</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">The user verify warning <span class="argument">'Durum OnBoardingOperationDraft olarak g&uuml;ncellendi'</span></span>
+
+  <span class="lead-duration duration">1.040</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">The user refresh the page</span>
+
+  <span class="lead-duration duration">3.097</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then failed">
+  <span class="keyword indention">Then</span>
+  <span class="name">The user verify revise reason <span class="argument">'Yasakl&#305; sekt&ouml;r'</span> for <span class="argument">'risk'</span></span>
+
+  <span class="lead-duration duration">10.021</span>
+
+</div>
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-32">
+          <a>org.openqa.selenium.NoSuchElementException:</a>
+      </div>
+      <div id="msg-32" class="collapse collapsable-details  in ">
+        <pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&quot;reviseReason&quot;]/span&quot;}
+  (Session info: chrome=139.0.7258.128)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.8.1', revision: '8ebccac989'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.14'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [e9b8f1d34cfdf111f44192428da83c04, findElement {using=xpath, value=//*[@id=&quot;reviseReason&quot;]/span}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.128, chrome: {chromedriverVersion: 139.0.7258.138 (884e54ea8d4..., userDataDir: C:\Users\semag\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58216}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58216/devtoo..., se:cdpVersion: 139.0.7258.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: e9b8f1d34cfdf111f44192428da83c04
+	at jdk.internal.reflect.GeneratedConstructorAccessor24.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at jdk.proxy2/jdk.proxy2.$Proxy25.getText(Unknown Source)
+	at Efectura.stepDefs.GeneralStepDefs.theUserVerifyReviseReason(GeneralStepDefs.java:243)
+	at &#10045;.The user verify revise reason 'Yasakl&#305; sekt&ouml;r' for 'risk'(file:///C:/Users/semag/Downloads/Telegram%20Desktop/SipayTestAutomation/SipayTestAutomation/src/test/resources/features/5-onboardingOperation.feature:30)
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">The user verify explanation <span class="argument">'Test notu'</span> for <span class="argument">'operation'</span></span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+  </div>
+</div>
+
+
+
+
+  <div class="inner-level hooks-element-after">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-33">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="after-33" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+              <span class="location name">Efectura.stepDefs.Hooks.tearDown(io.cucumber.java.Scenario)</span>
+
+  <span class="lead-duration duration">1.738</span>
+
+          </div>
+
+
+
+
+
+
+  <div class="embeddings inner-level">
+  <div class="embedding indention">
+    <div data-toggle="collapse" data-target="#embedding-34" class="collapsable-control">
+      <a>Onboarding Operation Revise Reason and note</a>
+      <a href="embeddings/embedding_351154341.png" download target="_blank">
+        <span class="download-button glyphicon glyphicon-download-alt"></span>
+      </a>
+    </div>
+    <div id="embedding-34" class="collapse collapsable-details ">
+      <div class="embedding-content">
+        <img src="embeddings/embedding_351154341.png">
+      </div>
+    </div>
+  </div>
+  </div>
+
+        </div>
+    </div>
+  </div>
+
+  </div>
+</div>
+
+
+<div class="element">
+    <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_5_670032615.html">Assigned Records Page</a>
+    </div>
+
+
+<div class="tags indention">
+    <b>Tags:</b>
+       <a href="report-tag_2149504379.html">@spy</a>
+</div>
+
+
+  <span class="lead-duration duration">2:18.133</span>
+
+
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-35">
+
+<div class="brief failed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">Assign Not To Me Listing Case</span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-35" class="collapse collapsable-details  in ">
+
+
+  <div class="inner-level hooks-element-before">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-36">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="before-36" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">Before</span>
+              <span class="location name">Efectura.stepDefs.Hooks.setup(io.cucumber.java.Scenario)</span>
+
+  <span class="lead-duration duration">0.717</span>
+
+          </div>
+
+
+
+
+
+
+
+        </div>
+    </div>
+  </div>
+
+
+
+<div class="steps inner-level">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-37">
+
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </div>
+
+  <div id="steps-37" class="inner-level collapse collapsable-details  in ">
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">The user click create new record button</span>
+
+  <span class="lead-duration duration">0.043</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">The user select <span class="argument">'Emre Uzun'</span> as salesRep</span>
+
+  <span class="lead-duration duration">23.307</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">The user fill and save the form</span>
+
+  <span class="lead-duration duration">1:44.617</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Given passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">The user logout</span>
+
+  <span class="lead-duration duration">0.097</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Given failed">
+  <span class="keyword indention">Given</span>
+  <span class="name">The user login</span>
+
+  <span class="lead-duration duration">10.066</span>
+
+</div>
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-38">
+          <a>org.openqa.selenium.NoSuchElementException:</a>
+      </div>
+      <div id="msg-38" class="collapse collapsable-details  in ">
+        <pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//input[@id='username']&quot;}
+  (Session info: chrome=139.0.7258.128)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.8.1', revision: '8ebccac989'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.14'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [711b78bbb2a5188adf2df945d69542e2, findElement {using=xpath, value=//input[@id='username']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.128, chrome: {chromedriverVersion: 139.0.7258.138 (884e54ea8d4..., userDataDir: C:\Users\semag\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58269}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58269/devtoo..., se:cdpVersion: 139.0.7258.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 711b78bbb2a5188adf2df945d69542e2
+	at jdk.internal.reflect.GeneratedConstructorAccessor24.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at jdk.proxy2/jdk.proxy2.$Proxy25.sendKeys(Unknown Source)
+	at Efectura.stepDefs.GeneralStepDefs.theUserLogin(GeneralStepDefs.java:28)
+	at &#10045;.The user login(file:///C:/Users/semag/Downloads/Telegram%20Desktop/SipayTestAutomation/SipayTestAutomation/src/test/resources/features/assignedRecords.feature:19)
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+          <table class="step-arguments">
+              <tr>
+                  <td>username</td>
+                  <td>merveakan</td>
+              </tr>
+              <tr>
+                  <td>password</td>
+                  <td>Sipay2025.</td>
+              </tr>
+          </table>
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When skipped">
+  <span class="keyword indention">When</span>
+  <span class="name">The user click assigned records tab</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">The user verify table no result</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+  </div>
+</div>
+
+
+
+
+  <div class="inner-level hooks-element-after">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-39">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="after-39" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+              <span class="location name">Efectura.stepDefs.Hooks.tearDown(io.cucumber.java.Scenario)</span>
+
+  <span class="lead-duration duration">1.843</span>
+
+          </div>
+
+
+
+
+
+
+  <div class="embeddings inner-level">
+  <div class="embedding indention">
+    <div data-toggle="collapse" data-target="#embedding-40" class="collapsable-control">
+      <a>Assign Not To Me Listing Case</a>
+      <a href="embeddings/embedding_1230429149.png" download target="_blank">
+        <span class="download-button glyphicon glyphicon-download-alt"></span>
+      </a>
+    </div>
+    <div id="embedding-40" class="collapse collapsable-details ">
+      <div class="embedding-content">
+        <img src="embeddings/embedding_1230429149.png">
+      </div>
+    </div>
+  </div>
+  </div>
+
+        </div>
+    </div>
+  </div>
+
+  </div>
+</div>
+
+
+<div class="element">
+    <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_5_670032615.html">Assigned Records Page</a>
+    </div>
+
+
+<div class="tags indention">
+    <b>Tags:</b>
+       <a href="report-tag_2149504379.html">@spy</a>
+</div>
+
+
+  <span class="lead-duration duration">2:28.517</span>
+
+
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-41">
+
+<div class="brief failed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">Assign To Me Listing Case</span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-41" class="collapse collapsable-details  in ">
+
+
+  <div class="inner-level hooks-element-before">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-42">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="before-42" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">Before</span>
+              <span class="location name">Efectura.stepDefs.Hooks.setup(io.cucumber.java.Scenario)</span>
+
+  <span class="lead-duration duration">0.839</span>
+
+          </div>
+
+
+
+
+
+
+
+        </div>
+    </div>
+  </div>
+
+
+
+<div class="steps inner-level">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-43">
+
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </div>
+
+  <div id="steps-43" class="inner-level collapse collapsable-details  in ">
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">The user click create new record button</span>
+
+  <span class="lead-duration duration">0.072</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">The user select <span class="argument">'Merve Akan'</span> as salesRep</span>
+
+  <span class="lead-duration duration">23.478</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">The user fill and save the form</span>
+
+  <span class="lead-duration duration">1:54.756</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Given passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">The user logout</span>
+
+  <span class="lead-duration duration">0.151</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Given failed">
+  <span class="keyword indention">Given</span>
+  <span class="name">The user login</span>
+
+  <span class="lead-duration duration">10.057</span>
+
+</div>
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-44">
+          <a>org.openqa.selenium.NoSuchElementException:</a>
+      </div>
+      <div id="msg-44" class="collapse collapsable-details  in ">
+        <pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//input[@id='username']&quot;}
+  (Session info: chrome=139.0.7258.128)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.8.1', revision: '8ebccac989'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.14'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [8d522b447e8b6bb74474b5f2372c865b, findElement {using=xpath, value=//input[@id='username']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.128, chrome: {chromedriverVersion: 139.0.7258.138 (884e54ea8d4..., userDataDir: C:\Users\semag\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58302}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58302/devtoo..., se:cdpVersion: 139.0.7258.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8d522b447e8b6bb74474b5f2372c865b
+	at jdk.internal.reflect.GeneratedConstructorAccessor24.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at jdk.proxy2/jdk.proxy2.$Proxy25.sendKeys(Unknown Source)
+	at Efectura.stepDefs.GeneralStepDefs.theUserLogin(GeneralStepDefs.java:28)
+	at &#10045;.The user login(file:///C:/Users/semag/Downloads/Telegram%20Desktop/SipayTestAutomation/SipayTestAutomation/src/test/resources/features/assignedRecords.feature:30)
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+          <table class="step-arguments">
+              <tr>
+                  <td>username</td>
+                  <td>merveakan</td>
+              </tr>
+              <tr>
+                  <td>password</td>
+                  <td>Sipay2025.</td>
+              </tr>
+          </table>
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When skipped">
+  <span class="keyword indention">When</span>
+  <span class="name">The user click assigned records tab</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">The user verify table with record</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+  </div>
+</div>
+
+
+
+
+  <div class="inner-level hooks-element-after">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-45">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="after-45" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+              <span class="location name">Efectura.stepDefs.Hooks.tearDown(io.cucumber.java.Scenario)</span>
+
+  <span class="lead-duration duration">1.859</span>
+
+          </div>
+
+
+
+
+
+
+  <div class="embeddings inner-level">
+  <div class="embedding indention">
+    <div data-toggle="collapse" data-target="#embedding-46" class="collapsable-control">
+      <a>Assign To Me Listing Case</a>
+      <a href="embeddings/embedding_222966526.png" download target="_blank">
+        <span class="download-button glyphicon glyphicon-download-alt"></span>
+      </a>
+    </div>
+    <div id="embedding-46" class="collapse collapsable-details ">
+      <div class="embedding-content">
+        <img src="embeddings/embedding_222966526.png">
+      </div>
+    </div>
+  </div>
+  </div>
+
+        </div>
+    </div>
+  </div>
+
+  </div>
+</div>
+
+
+<div class="element">
+    <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_5_670032615.html">Assigned Records Page</a>
+    </div>
+
+
+<div class="tags indention">
+    <b>Tags:</b>
+       <a href="report-tag_2149504379.html">@spy</a>
+</div>
+
+
+  <span class="lead-duration duration">2:27.831</span>
+
+
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-47">
+
+<div class="brief failed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">Records Not I Created Listing Case</span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-47" class="collapse collapsable-details  in ">
+
+
+  <div class="inner-level hooks-element-before">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-48">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="before-48" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">Before</span>
+              <span class="location name">Efectura.stepDefs.Hooks.setup(io.cucumber.java.Scenario)</span>
+
+  <span class="lead-duration duration">0.789</span>
+
+          </div>
+
+
+
+
+
+
+
+        </div>
+    </div>
+  </div>
+
+
+
+<div class="steps inner-level">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-49">
+
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </div>
+
+  <div id="steps-49" class="inner-level collapse collapsable-details  in ">
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">The user click create new record button</span>
+
+  <span class="lead-duration duration">0.055</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">The user select <span class="argument">'Merve Akan'</span> as salesRep</span>
+
+  <span class="lead-duration duration">23.423</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">The user fill and save the form</span>
+
+  <span class="lead-duration duration">1:54.260</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Given passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">The user logout</span>
+
+  <span class="lead-duration duration">0.077</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Given failed">
+  <span class="keyword indention">Given</span>
+  <span class="name">The user login</span>
+
+  <span class="lead-duration duration">10.014</span>
+
+</div>
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-50">
+          <a>org.openqa.selenium.NoSuchElementException:</a>
+      </div>
+      <div id="msg-50" class="collapse collapsable-details  in ">
+        <pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//input[@id='username']&quot;}
+  (Session info: chrome=139.0.7258.128)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.8.1', revision: '8ebccac989'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.14'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [bfa3101f6ff14916200e13f2134f1692, findElement {using=xpath, value=//input[@id='username']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.128, chrome: {chromedriverVersion: 139.0.7258.138 (884e54ea8d4..., userDataDir: C:\Users\semag\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58338}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58338/devtoo..., se:cdpVersion: 139.0.7258.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: bfa3101f6ff14916200e13f2134f1692
+	at jdk.internal.reflect.GeneratedConstructorAccessor24.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at jdk.proxy2/jdk.proxy2.$Proxy25.sendKeys(Unknown Source)
+	at Efectura.stepDefs.GeneralStepDefs.theUserLogin(GeneralStepDefs.java:28)
+	at &#10045;.The user login(file:///C:/Users/semag/Downloads/Telegram%20Desktop/SipayTestAutomation/SipayTestAutomation/src/test/resources/features/assignedRecords.feature:41)
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+          <table class="step-arguments">
+              <tr>
+                  <td>username</td>
+                  <td>merveakan</td>
+              </tr>
+              <tr>
+                  <td>password</td>
+                  <td>Sipay2025.</td>
+              </tr>
+          </table>
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When skipped">
+  <span class="keyword indention">When</span>
+  <span class="name">The user click assigned records tab</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When skipped">
+  <span class="keyword indention">When</span>
+  <span class="name">The user click assignedOrCreatedCheckbox</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">The user verify table no result for created case</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+  </div>
+</div>
+
+
+
+
+  <div class="inner-level hooks-element-after">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-51">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="after-51" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+              <span class="location name">Efectura.stepDefs.Hooks.tearDown(io.cucumber.java.Scenario)</span>
+
+  <span class="lead-duration duration">1.847</span>
+
+          </div>
+
+
+
+
+
+
+  <div class="embeddings inner-level">
+  <div class="embedding indention">
+    <div data-toggle="collapse" data-target="#embedding-52" class="collapsable-control">
+      <a>Records Not I Created Listing Case</a>
+      <a href="embeddings/embedding_1230429149.png" download target="_blank">
+        <span class="download-button glyphicon glyphicon-download-alt"></span>
+      </a>
+    </div>
+    <div id="embedding-52" class="collapse collapsable-details ">
+      <div class="embedding-content">
+        <img src="embeddings/embedding_1230429149.png">
+      </div>
+    </div>
+  </div>
+  </div>
+
+        </div>
+    </div>
+  </div>
+
+  </div>
+</div>
+
+
+<div class="element">
+    <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_5_670032615.html">Assigned Records Page</a>
+    </div>
+
+
+<div class="tags indention">
+    <b>Tags:</b>
+       <a href="report-tag_2149504379.html">@spy</a>
+</div>
+
+
+  <span class="lead-duration duration">14.225</span>
+
+
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-53">
+
+<div class="brief failed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">Assigned Records Create date filter</span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-53" class="collapse collapsable-details  in ">
+
+
+  <div class="inner-level hooks-element-before">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-54">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="before-54" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">Before</span>
+              <span class="location name">Efectura.stepDefs.Hooks.setup(io.cucumber.java.Scenario)</span>
+
+  <span class="lead-duration duration">0.623</span>
+
+          </div>
+
+
+
+
+
+
+
+        </div>
+    </div>
+  </div>
+
+
+
+<div class="steps inner-level">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-55">
+
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </div>
+
+  <div id="steps-55" class="inner-level collapse collapsable-details  in ">
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">The user click assigned records tab</span>
+
+  <span class="lead-duration duration">3.070</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When failed">
+  <span class="keyword indention">When</span>
+  <span class="name">The user select date filter <span class="argument">14</span> <span class="argument">8</span> <span class="argument">2025</span></span>
+
+  <span class="lead-duration duration">11.155</span>
+
+</div>
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-56">
+          <a>org.openqa.selenium.TimeoutException:</a>
+      </div>
+      <div id="msg-56" class="collapse collapsable-details  in ">
+        <pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //button[.//span[normalize-space()='Olu&#351;turulma Tarihi']] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.8.1', revision: '8ebccac989'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.14'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.128, chrome: {chromedriverVersion: 139.0.7258.138 (884e54ea8d4..., userDataDir: C:\Users\semag\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58437}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58437/devtoo..., se:cdpVersion: 139.0.7258.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 82cbf5cf71b7ec1bb714de2fd090d6ed
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at Efectura.utilities.DateFilterUtils.selectCreatedAt(DateFilterUtils.java:30)
+	at Efectura.stepDefs.SearchStepDefs.theUserSelectDateFilter(SearchStepDefs.java:114)
+	at &#10045;.The user select date filter 14 8 2025(file:///C:/Users/semag/Downloads/Telegram%20Desktop/SipayTestAutomation/SipayTestAutomation/src/test/resources/features/assignedRecords.feature:63)
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">The user verify create date filter <span class="argument">14</span> <span class="argument">8</span> <span class="argument">2025</span></span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+  </div>
+</div>
+
+
+
+
+  <div class="inner-level hooks-element-after">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-57">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="after-57" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+              <span class="location name">Efectura.stepDefs.Hooks.tearDown(io.cucumber.java.Scenario)</span>
+
+  <span class="lead-duration duration">1.784</span>
+
+          </div>
+
+
+
+
+
+
+  <div class="embeddings inner-level">
+  <div class="embedding indention">
+    <div data-toggle="collapse" data-target="#embedding-58" class="collapsable-control">
+      <a>Assigned Records Create date filter</a>
+      <a href="embeddings/embedding_189460312.png" download target="_blank">
+        <span class="download-button glyphicon glyphicon-download-alt"></span>
+      </a>
+    </div>
+    <div id="embedding-58" class="collapse collapsable-details ">
+      <div class="embedding-content">
+        <img src="embeddings/embedding_189460312.png">
+      </div>
+    </div>
+  </div>
+  </div>
+
+        </div>
+    </div>
+  </div>
+
+  </div>
+</div>
+
+
+<div class="element">
+    <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_5_670032615.html">Assigned Records Page</a>
+    </div>
+
+
+<div class="tags indention">
+    <b>Tags:</b>
+       <a href="report-tag_2149504379.html">@spy</a>
+</div>
+
+
+  <span class="lead-duration duration">15.342</span>
+
+
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-59">
+
+<div class="brief failed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">Assigned Records Create date and Deal Status filter</span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-59" class="collapse collapsable-details  in ">
+
+
+  <div class="inner-level hooks-element-before">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-60">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="before-60" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">Before</span>
+              <span class="location name">Efectura.stepDefs.Hooks.setup(io.cucumber.java.Scenario)</span>
+
+  <span class="lead-duration duration">0.614</span>
+
+          </div>
+
+
+
+
+
+
+
+        </div>
+    </div>
+  </div>
+
+
+
+<div class="steps inner-level">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-61">
+
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </div>
+
+  <div id="steps-61" class="inner-level collapse collapsable-details  in ">
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">The user click assigned records tab</span>
+
+  <span class="lead-duration duration">3.074</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">The user select <span class="argument">'Lead'</span> in deal status filter</span>
+
+  <span class="lead-duration duration">1.217</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When failed">
+  <span class="keyword indention">When</span>
+  <span class="name">The user select date filter <span class="argument">12</span> <span class="argument">8</span> <span class="argument">2025</span></span>
+
+  <span class="lead-duration duration">11.050</span>
+
+</div>
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-62">
+          <a>org.openqa.selenium.TimeoutException:</a>
+      </div>
+      <div id="msg-62" class="collapse collapsable-details  in ">
+        <pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //button[.//span[normalize-space()='Olu&#351;turulma Tarihi']] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.8.1', revision: '8ebccac989'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.14'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.128, chrome: {chromedriverVersion: 139.0.7258.138 (884e54ea8d4..., userDataDir: C:\Users\semag\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58462}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58462/devtoo..., se:cdpVersion: 139.0.7258.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f8b4f7249506c87b0ca91be78ccee65c
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at Efectura.utilities.DateFilterUtils.selectCreatedAt(DateFilterUtils.java:30)
+	at Efectura.stepDefs.SearchStepDefs.theUserSelectDateFilter(SearchStepDefs.java:114)
+	at &#10045;.The user select date filter 12 8 2025(file:///C:/Users/semag/Downloads/Telegram%20Desktop/SipayTestAutomation/SipayTestAutomation/src/test/resources/features/assignedRecords.feature:69)
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">The user verify create date filter <span class="argument">12</span> <span class="argument">8</span> <span class="argument">2025</span></span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">The user verify deal status filter with <span class="argument">'Lead'</span></span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+  </div>
+</div>
+
+
+
+
+  <div class="inner-level hooks-element-after">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-63">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="after-63" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+              <span class="location name">Efectura.stepDefs.Hooks.tearDown(io.cucumber.java.Scenario)</span>
+
+  <span class="lead-duration duration">1.825</span>
+
+          </div>
+
+
+
+
+
+
+  <div class="embeddings inner-level">
+  <div class="embedding indention">
+    <div data-toggle="collapse" data-target="#embedding-64" class="collapsable-control">
+      <a>Assigned Records Create date and Deal Status filter</a>
+      <a href="embeddings/embedding_195221061.png" download target="_blank">
+        <span class="download-button glyphicon glyphicon-download-alt"></span>
+      </a>
+    </div>
+    <div id="embedding-64" class="collapse collapsable-details ">
+      <div class="embedding-content">
+        <img src="embeddings/embedding_195221061.png">
+      </div>
+    </div>
+  </div>
+  </div>
+
+        </div>
+    </div>
+  </div>
+
+  </div>
+</div>
+
+
+<div class="element">
+    <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_5_670032615.html">Assigned Records Page</a>
+    </div>
+
+
+<div class="tags indention">
+    <b>Tags:</b>
+       <a href="report-tag_2149504379.html">@spy</a>
+</div>
+
+
+  <span class="lead-duration duration">16.278</span>
+
+
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-65">
+
+<div class="brief failed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">Assigned Records Create date filter reset button</span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-65" class="collapse collapsable-details  in ">
+
+
+  <div class="inner-level hooks-element-before">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-66">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="before-66" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">Before</span>
+              <span class="location name">Efectura.stepDefs.Hooks.setup(io.cucumber.java.Scenario)</span>
+
+  <span class="lead-duration duration">0.618</span>
+
+          </div>
+
+
+
+
+
+
+
+        </div>
+    </div>
+  </div>
+
+
+
+<div class="steps inner-level">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-67">
+
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </div>
+
+  <div id="steps-67" class="inner-level collapse collapsable-details  in ">
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">The user click assigned records tab</span>
+
+  <span class="lead-duration duration">3.084</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">The user enter <span class="argument">'Sena'</span> to search input</span>
+
+  <span class="lead-duration duration">2.146</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When failed">
+  <span class="keyword indention">When</span>
+  <span class="name">The user select date filter <span class="argument">14</span> <span class="argument">8</span> <span class="argument">2025</span></span>
+
+  <span class="lead-duration duration">11.047</span>
+
+</div>
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-68">
+          <a>org.openqa.selenium.TimeoutException:</a>
+      </div>
+      <div id="msg-68" class="collapse collapsable-details  in ">
+        <pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //button[.//span[normalize-space()='Olu&#351;turulma Tarihi']] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.8.1', revision: '8ebccac989'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.14'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.128, chrome: {chromedriverVersion: 139.0.7258.138 (884e54ea8d4..., userDataDir: C:\Users\semag\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58490}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58490/devtoo..., se:cdpVersion: 139.0.7258.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 4fec9db181d90782a96b6e7f94f3edc4
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at Efectura.utilities.DateFilterUtils.selectCreatedAt(DateFilterUtils.java:30)
+	at Efectura.stepDefs.SearchStepDefs.theUserSelectDateFilter(SearchStepDefs.java:114)
+	at &#10045;.The user select date filter 14 8 2025(file:///C:/Users/semag/Downloads/Telegram%20Desktop/SipayTestAutomation/SipayTestAutomation/src/test/resources/features/assignedRecords.feature:76)
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When skipped">
+  <span class="keyword indention">When</span>
+  <span class="name">The user click create date reset button</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">The user verify Reset button func for create date filter</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+  </div>
+</div>
+
+
+
+
+  <div class="inner-level hooks-element-after">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-69">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="after-69" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+              <span class="location name">Efectura.stepDefs.Hooks.tearDown(io.cucumber.java.Scenario)</span>
+
+  <span class="lead-duration duration">1.827</span>
+
+          </div>
+
+
+
+
+
+
+  <div class="embeddings inner-level">
+  <div class="embedding indention">
+    <div data-toggle="collapse" data-target="#embedding-70" class="collapsable-control">
+      <a>Assigned Records Create date filter reset button</a>
+      <a href="embeddings/embedding_-110611084.png" download target="_blank">
+        <span class="download-button glyphicon glyphicon-download-alt"></span>
+      </a>
+    </div>
+    <div id="embedding-70" class="collapse collapsable-details ">
+      <div class="embedding-content">
+        <img src="embeddings/embedding_-110611084.png">
+      </div>
+    </div>
+  </div>
+  </div>
+
+        </div>
+    </div>
+  </div>
+
+  </div>
+</div>
+
+
+<div class="element">
+    <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_5_670032615.html">Assigned Records Page</a>
+    </div>
+
+
+<div class="tags indention">
+    <b>Tags:</b>
+       <a href="report-tag_2149504379.html">@spy</a>
+</div>
+
+
+  <span class="lead-duration duration">16.386</span>
+
+
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-71">
+
+<div class="brief failed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">Assigned Records Go To Related Record button</span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-71" class="collapse collapsable-details  in ">
+
+
+  <div class="inner-level hooks-element-before">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-72">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="before-72" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">Before</span>
+              <span class="location name">Efectura.stepDefs.Hooks.setup(io.cucumber.java.Scenario)</span>
+
+  <span class="lead-duration duration">0.623</span>
+
+          </div>
+
+
+
+
+
+
+
+        </div>
+    </div>
+  </div>
+
+
+
+<div class="steps inner-level">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-73">
+
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </div>
+
+  <div id="steps-73" class="inner-level collapse collapsable-details  in ">
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">The user click assigned records tab</span>
+
+  <span class="lead-duration duration">3.078</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">The user select <span class="argument">'Prospect'</span> in deal status filter</span>
+
+  <span class="lead-duration duration">1.237</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">The user click related record button at row <span class="argument">1</span></span>
+
+  <span class="lead-duration duration">0.051</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then failed">
+  <span class="keyword indention">Then</span>
+  <span class="name">The user verify <span class="argument">'Lead Formu'</span> form is open</span>
+
+  <span class="lead-duration duration">12.018</span>
+
+</div>
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-74">
+          <a>org.openqa.selenium.NoSuchElementException:</a>
+      </div>
+      <div id="msg-74" class="collapse collapsable-details  in ">
+        <pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id='root']/div/main/div/div/div[1]//h3&quot;}
+  (Session info: chrome=139.0.7258.128)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.8.1', revision: '8ebccac989'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.14'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [c5903c54f4bc2c699dba87a4c2bff5e5, findElement {using=xpath, value=//*[@id='root']/div/main/div/div/div[1]//h3}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.128, chrome: {chromedriverVersion: 139.0.7258.138 (884e54ea8d4..., userDataDir: C:\Users\semag\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58516}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58516/devtoo..., se:cdpVersion: 139.0.7258.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c5903c54f4bc2c699dba87a4c2bff5e5
+	at jdk.internal.reflect.GeneratedConstructorAccessor24.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at Efectura.stepDefs.SearchStepDefs.theUserVerifyFormIsOpen(SearchStepDefs.java:222)
+	at &#10045;.The user verify 'Lead Formu' form is open(file:///C:/Users/semag/Downloads/Telegram%20Desktop/SipayTestAutomation/SipayTestAutomation/src/test/resources/features/assignedRecords.feature:84)
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+  </div>
+</div>
+
+
+
+
+  <div class="inner-level hooks-element-after">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-75">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="after-75" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+              <span class="location name">Efectura.stepDefs.Hooks.tearDown(io.cucumber.java.Scenario)</span>
+
+  <span class="lead-duration duration">1.849</span>
+
+          </div>
+
+
+
+
+
+
+  <div class="embeddings inner-level">
+  <div class="embedding indention">
+    <div data-toggle="collapse" data-target="#embedding-76" class="collapsable-control">
+      <a>Assigned Records Go To Related Record button</a>
+      <a href="embeddings/embedding_-255045121.png" download target="_blank">
+        <span class="download-button glyphicon glyphicon-download-alt"></span>
+      </a>
+    </div>
+    <div id="embedding-76" class="collapse collapsable-details ">
+      <div class="embedding-content">
+        <img src="embeddings/embedding_-255045121.png">
+      </div>
+    </div>
+  </div>
+  </div>
+
+        </div>
+    </div>
+  </div>
+
+  </div>
+</div>
+
+
+<div class="element">
+    <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_6_1069876626.html">Search Page Scenarios</a>
+    </div>
+
+
+<div class="tags indention">
+    <b>Tags:</b>
+       <a href="report-tag_2149504379.html">@spy</a>
+</div>
+
+
+  <span class="lead-duration duration">1.486</span>
+
+
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-77">
+
+<div class="brief failed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">Deal Durumu Reset Filter</span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-77" class="collapse collapsable-details  in ">
+
+
+  <div class="inner-level hooks-element-before">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-78">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="before-78" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">Before</span>
+              <span class="location name">Efectura.stepDefs.Hooks.setup(io.cucumber.java.Scenario)</span>
+
+  <span class="lead-duration duration">0.663</span>
+
+          </div>
+
+
+
+
+
+
+
+        </div>
+    </div>
+  </div>
+
+
+
+<div class="steps inner-level">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-79">
+
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </div>
+
+  <div id="steps-79" class="inner-level collapse collapsable-details  in ">
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">The user select <span class="argument">'Prospect'</span> in deal status filter</span>
+
+  <span class="lead-duration duration">1.358</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">The user click deal status reset button</span>
+
+  <span class="lead-duration duration">0.087</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And failed">
+  <span class="keyword indention">And</span>
+  <span class="name">The user verify Reset button func for deal status filter</span>
+
+  <span class="lead-duration duration">0.040</span>
+
+</div>
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-80">
+          <a>org.junit.ComparisonFailure:</a>
+      </div>
+      <div id="msg-80" class="collapse collapsable-details  in ">
+        <pre>org.junit.ComparisonFailure: Deal Durumu Resetlenmedi expected:&lt;Deal [Durumu]&gt; but was:&lt;Deal [Status]&gt;
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at Efectura.stepDefs.SearchStepDefs.theUserVerifyResetButtonFuncForDealStatusFilter(SearchStepDefs.java:79)
+	at &#10045;.The user verify Reset button func for deal status filter(file:///C:/Users/semag/Downloads/Telegram%20Desktop/SipayTestAutomation/SipayTestAutomation/src/test/resources/features/searchPage.feature:25)
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+  </div>
+</div>
+
+
+
+
+  <div class="inner-level hooks-element-after">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-81">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="after-81" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+              <span class="location name">Efectura.stepDefs.Hooks.tearDown(io.cucumber.java.Scenario)</span>
+
+  <span class="lead-duration duration">1.878</span>
+
+          </div>
+
+
+
+
+
+
+  <div class="embeddings inner-level">
+  <div class="embedding indention">
+    <div data-toggle="collapse" data-target="#embedding-82" class="collapsable-control">
+      <a>Deal Durumu Reset Filter</a>
+      <a href="embeddings/embedding_1988903771.png" download target="_blank">
+        <span class="download-button glyphicon glyphicon-download-alt"></span>
+      </a>
+    </div>
+    <div id="embedding-82" class="collapse collapsable-details ">
+      <div class="embedding-content">
+        <img src="embeddings/embedding_1988903771.png">
+      </div>
+    </div>
+  </div>
+  </div>
+
+        </div>
+    </div>
+  </div>
+
+  </div>
+</div>
+
+
+<div class="element">
+    <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_6_1069876626.html">Search Page Scenarios</a>
+    </div>
+
+
+<div class="tags indention">
+    <b>Tags:</b>
+       <a href="report-tag_2149504379.html">@spy</a>
+</div>
+
+
+  <span class="lead-duration duration">13.238</span>
+
+
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-83">
+
+<div class="brief failed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">Create date filter</span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-83" class="collapse collapsable-details  in ">
+
+
+  <div class="inner-level hooks-element-before">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-84">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="before-84" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">Before</span>
+              <span class="location name">Efectura.stepDefs.Hooks.setup(io.cucumber.java.Scenario)</span>
+
+  <span class="lead-duration duration">0.714</span>
+
+          </div>
+
+
+
+
+
+
+
+        </div>
+    </div>
+  </div>
+
+
+
+<div class="steps inner-level">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-85">
+
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </div>
+
+  <div id="steps-85" class="inner-level collapse collapsable-details  in ">
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">The user enter <span class="argument">'Sena'</span> to search input</span>
+
+  <span class="lead-duration duration">2.205</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When failed">
+  <span class="keyword indention">When</span>
+  <span class="name">The user select date filter <span class="argument">14</span> <span class="argument">8</span> <span class="argument">2025</span></span>
+
+  <span class="lead-duration duration">11.032</span>
+
+</div>
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-86">
+          <a>org.openqa.selenium.TimeoutException:</a>
+      </div>
+      <div id="msg-86" class="collapse collapsable-details  in ">
+        <pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //button[.//span[normalize-space()='Olu&#351;turulma Tarihi']] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.8.1', revision: '8ebccac989'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.14'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.128, chrome: {chromedriverVersion: 139.0.7258.138 (884e54ea8d4..., userDataDir: C:\Users\semag\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58714}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58714/devtoo..., se:cdpVersion: 139.0.7258.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c0df1bfbe4db8185ce92daa3c006ad58
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at Efectura.utilities.DateFilterUtils.selectCreatedAt(DateFilterUtils.java:30)
+	at Efectura.stepDefs.SearchStepDefs.theUserSelectDateFilter(SearchStepDefs.java:114)
+	at &#10045;.The user select date filter 14 8 2025(file:///C:/Users/semag/Downloads/Telegram%20Desktop/SipayTestAutomation/SipayTestAutomation/src/test/resources/features/searchPage.feature:36)
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">The user verify create date filter <span class="argument">14</span> <span class="argument">8</span> <span class="argument">2025</span></span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+  </div>
+</div>
+
+
+
+
+  <div class="inner-level hooks-element-after">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-87">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="after-87" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+              <span class="location name">Efectura.stepDefs.Hooks.tearDown(io.cucumber.java.Scenario)</span>
+
+  <span class="lead-duration duration">1.810</span>
+
+          </div>
+
+
+
+
+
+
+  <div class="embeddings inner-level">
+  <div class="embedding indention">
+    <div data-toggle="collapse" data-target="#embedding-88" class="collapsable-control">
+      <a>Create date filter</a>
+      <a href="embeddings/embedding_31868238.png" download target="_blank">
+        <span class="download-button glyphicon glyphicon-download-alt"></span>
+      </a>
+    </div>
+    <div id="embedding-88" class="collapse collapsable-details ">
+      <div class="embedding-content">
+        <img src="embeddings/embedding_31868238.png">
+      </div>
+    </div>
+  </div>
+  </div>
+
+        </div>
+    </div>
+  </div>
+
+  </div>
+</div>
+
+
+<div class="element">
+    <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_6_1069876626.html">Search Page Scenarios</a>
+    </div>
+
+
+<div class="tags indention">
+    <b>Tags:</b>
+       <a href="report-tag_2149504379.html">@spy</a>
+</div>
+
+
+  <span class="lead-duration duration">13.173</span>
+
+
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-89">
+
+<div class="brief failed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">Create date filter reset button</span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-89" class="collapse collapsable-details  in ">
+
+
+  <div class="inner-level hooks-element-before">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-90">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="before-90" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">Before</span>
+              <span class="location name">Efectura.stepDefs.Hooks.setup(io.cucumber.java.Scenario)</span>
+
+  <span class="lead-duration duration">0.843</span>
+
+          </div>
+
+
+
+
+
+
+
+        </div>
+    </div>
+  </div>
+
+
+
+<div class="steps inner-level">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-91">
+
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </div>
+
+  <div id="steps-91" class="inner-level collapse collapsable-details  in ">
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">The user enter <span class="argument">'Sena'</span> to search input</span>
+
+  <span class="lead-duration duration">2.154</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When failed">
+  <span class="keyword indention">When</span>
+  <span class="name">The user select date filter <span class="argument">14</span> <span class="argument">8</span> <span class="argument">2025</span></span>
+
+  <span class="lead-duration duration">11.018</span>
+
+</div>
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-92">
+          <a>org.openqa.selenium.TimeoutException:</a>
+      </div>
+      <div id="msg-92" class="collapse collapsable-details  in ">
+        <pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //button[.//span[normalize-space()='Olu&#351;turulma Tarihi']] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.8.1', revision: '8ebccac989'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.14'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.128, chrome: {chromedriverVersion: 139.0.7258.138 (884e54ea8d4..., userDataDir: C:\Users\semag\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58739}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58739/devtoo..., se:cdpVersion: 139.0.7258.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 4f32fef037d5f713b551a39ea17d440d
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at Efectura.utilities.DateFilterUtils.selectCreatedAt(DateFilterUtils.java:30)
+	at Efectura.stepDefs.SearchStepDefs.theUserSelectDateFilter(SearchStepDefs.java:114)
+	at &#10045;.The user select date filter 14 8 2025(file:///C:/Users/semag/Downloads/Telegram%20Desktop/SipayTestAutomation/SipayTestAutomation/src/test/resources/features/searchPage.feature:41)
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When skipped">
+  <span class="keyword indention">When</span>
+  <span class="name">The user click create date reset button</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">The user verify Reset button func for create date filter</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+  </div>
+</div>
+
+
+
+
+  <div class="inner-level hooks-element-after">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-93">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="after-93" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+              <span class="location name">Efectura.stepDefs.Hooks.tearDown(io.cucumber.java.Scenario)</span>
+
+  <span class="lead-duration duration">1.845</span>
+
+          </div>
+
+
+
+
+
+
+  <div class="embeddings inner-level">
+  <div class="embedding indention">
+    <div data-toggle="collapse" data-target="#embedding-94" class="collapsable-control">
+      <a>Create date filter reset button</a>
+      <a href="embeddings/embedding_1729409580.png" download target="_blank">
+        <span class="download-button glyphicon glyphicon-download-alt"></span>
+      </a>
+    </div>
+    <div id="embedding-94" class="collapse collapsable-details ">
+      <div class="embedding-content">
+        <img src="embeddings/embedding_1729409580.png">
+      </div>
+    </div>
+  </div>
+  </div>
+
+        </div>
+    </div>
+  </div>
+
+  </div>
+</div>
+
+
+<div class="element">
+    <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_6_1069876626.html">Search Page Scenarios</a>
+    </div>
+
+
+<div class="tags indention">
+    <b>Tags:</b>
+       <a href="report-tag_2149504379.html">@spy</a>
+</div>
+
+
+  <span class="lead-duration duration">2:9.295</span>
+
+
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-95">
+
+<div class="brief failed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">Save New Record</span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-95" class="collapse collapsable-details  in ">
+
+
+  <div class="inner-level hooks-element-before">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-96">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="before-96" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">Before</span>
+              <span class="location name">Efectura.stepDefs.Hooks.setup(io.cucumber.java.Scenario)</span>
+
+  <span class="lead-duration duration">0.698</span>
+
+          </div>
+
+
+
+
+
+
+
+        </div>
+    </div>
+  </div>
+
+
+
+<div class="steps inner-level">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-97">
+
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </div>
+
+  <div id="steps-97" class="inner-level collapse collapsable-details  in ">
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">The user click create new record button</span>
+
+  <span class="lead-duration duration">0.057</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">The user fill and save the form</span>
+
+  <span class="lead-duration duration">1:55.352</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then failed">
+  <span class="keyword indention">Then</span>
+  <span class="name">The user verify record is created</span>
+
+  <span class="lead-duration duration">13.885</span>
+
+</div>
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-98">
+          <a>org.openqa.selenium.NoSuchElementException:</a>
+      </div>
+      <div id="msg-98" class="collapse collapsable-details  in ">
+        <pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//input[contains(@id,'earch')]&quot;}
+  (Session info: chrome=139.0.7258.128)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.8.1', revision: '8ebccac989'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.14'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [c3faafc19143a3c8939419a999b37cea, findElement {using=xpath, value=//input[contains(@id,'earch')]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.128, chrome: {chromedriverVersion: 139.0.7258.138 (884e54ea8d4..., userDataDir: C:\Users\semag\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58766}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58766/devtoo..., se:cdpVersion: 139.0.7258.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c3faafc19143a3c8939419a999b37cea
+	at jdk.internal.reflect.GeneratedConstructorAccessor24.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at jdk.proxy2/jdk.proxy2.$Proxy25.sendKeys(Unknown Source)
+	at Efectura.stepDefs.SearchStepDefs.theUserVerifyRecordIsCreated(SearchStepDefs.java:192)
+	at &#10045;.The user verify record is created(file:///C:/Users/semag/Downloads/Telegram%20Desktop/SipayTestAutomation/SipayTestAutomation/src/test/resources/features/searchPage.feature:48)
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+  </div>
+</div>
+
+
+
+
+  <div class="inner-level hooks-element-after">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-99">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="after-99" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+              <span class="location name">Efectura.stepDefs.Hooks.tearDown(io.cucumber.java.Scenario)</span>
+
+  <span class="lead-duration duration">1.861</span>
+
+          </div>
+
+
+
+
+
+
+  <div class="embeddings inner-level">
+  <div class="embedding indention">
+    <div data-toggle="collapse" data-target="#embedding-100" class="collapsable-control">
+      <a>Save New Record</a>
+      <a href="embeddings/embedding_1861797597.png" download target="_blank">
+        <span class="download-button glyphicon glyphicon-download-alt"></span>
+      </a>
+    </div>
+    <div id="embedding-100" class="collapse collapsable-details ">
+      <div class="embedding-content">
+        <img src="embeddings/embedding_1861797597.png">
+      </div>
+    </div>
+  </div>
+  </div>
+
+        </div>
+    </div>
+  </div>
+
+  </div>
+</div>
+
+        </div>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-1 col-md-offset-10">
+      <i class="fa fa-chevron-circle-down fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('show')"></i>
+      <i class="fa fa-chevron-circle-up fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('hide')"></i>
+    </div>
+  </div>
+</div>
+
+<br/>
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>

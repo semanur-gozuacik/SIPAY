@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script>
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<title>Cucumber Reports  - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+        <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+        <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>Semaaa</td>
+      <td>20 Aug 2025, 12:54</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+  </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+      <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+  </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Average duration</th>
+            <th>Max duration</th>
+            <th>Total durations</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+              <td class="location">Efectura.stepDefs.AssignedRecordsStepDefs.theUserClickAssignedOrCreatedCheckbox()</td>
+              <td>2</td>
+              <td class="duration" data-value="538687600">0.538</td>
+              <td class="duration" data-value="538687600">1.077</td>
+              <td class="duration" data-value="1077375200">1.077</td>
+              <td class="failed">50.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Efectura.stepDefs.AssignedRecordsStepDefs.theUserVerifyAssignedRecordsTab()</td>
+              <td>1</td>
+              <td class="duration" data-value="72613000">0.072</td>
+              <td class="duration" data-value="72613000">0.072</td>
+              <td class="duration" data-value="72613000">0.072</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Efectura.stepDefs.GeneralStepDefs.theUserClickAssignedRecordsTab()</td>
+              <td>11</td>
+              <td class="duration" data-value="2235787490">2.235</td>
+              <td class="duration" data-value="2235787490">3.084</td>
+              <td class="duration" data-value="24593662400">24.593</td>
+              <td class="failed">72.73%</td>
+            </tr>
+            <tr>
+              <td class="location">Efectura.stepDefs.GeneralStepDefs.theUserClickButton(java.lang.String)</td>
+              <td>16</td>
+              <td class="duration" data-value="1666665656">1.666</td>
+              <td class="duration" data-value="1666665656">2.425</td>
+              <td class="duration" data-value="26666650500">26.666</td>
+              <td class="failed">75.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Efectura.stepDefs.GeneralStepDefs.theUserClickNextPageButton()</td>
+              <td>2</td>
+              <td class="duration" data-value="55231150">0.055</td>
+              <td class="duration" data-value="55231150">0.059</td>
+              <td class="duration" data-value="110462300">0.110</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Efectura.stepDefs.GeneralStepDefs.theUserEnterIntoExplanation(java.lang.String,java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="92029300">0.092</td>
+              <td class="duration" data-value="92029300">0.092</td>
+              <td class="duration" data-value="92029300">0.092</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Efectura.stepDefs.GeneralStepDefs.theUserEnterToTaksitInput(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="61326600">0.061</td>
+              <td class="duration" data-value="61326600">0.061</td>
+              <td class="duration" data-value="61326600">0.061</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Efectura.stepDefs.GeneralStepDefs.theUserGoToLastPage()</td>
+              <td>2</td>
+              <td class="duration" data-value="127112964650">2:7.112</td>
+              <td class="duration" data-value="127112964650">3:39.334</td>
+              <td class="duration" data-value="254225929300">4:14.225</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Efectura.stepDefs.GeneralStepDefs.theUserGoToOtherTab()</td>
+              <td>11</td>
+              <td class="duration" data-value="3021611300">3.021</td>
+              <td class="duration" data-value="3021611300">3.028</td>
+              <td class="duration" data-value="33237724300">33.237</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Efectura.stepDefs.GeneralStepDefs.theUserGoToProspectOnNavbar(java.lang.String)</td>
+              <td>7</td>
+              <td class="duration" data-value="75637700">0.075</td>
+              <td class="duration" data-value="75637700">0.217</td>
+              <td class="duration" data-value="529463900">0.529</td>
+              <td class="failed">71.43%</td>
+            </tr>
+            <tr>
+              <td class="location">Efectura.stepDefs.GeneralStepDefs.theUserLogin(io.cucumber.datatable.DataTable)</td>
+              <td>42</td>
+              <td class="duration" data-value="2786594985">2.786</td>
+              <td class="duration" data-value="2786594985">12.250</td>
+              <td class="duration" data-value="117036989400">1:57.036</td>
+              <td class="failed">88.10%</td>
+            </tr>
+            <tr>
+              <td class="location">Efectura.stepDefs.GeneralStepDefs.theUserLogout()</td>
+              <td>3</td>
+              <td class="duration" data-value="109099000">0.109</td>
+              <td class="duration" data-value="109099000">0.151</td>
+              <td class="duration" data-value="327297000">0.327</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Efectura.stepDefs.GeneralStepDefs.theUserOpenProspectInfoInForm(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="393622600">0.393</td>
+              <td class="duration" data-value="393622600">0.393</td>
+              <td class="duration" data-value="393622600">0.393</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Efectura.stepDefs.GeneralStepDefs.theUserRefreshThePage()</td>
+              <td>2</td>
+              <td class="duration" data-value="3095209000">3.095</td>
+              <td class="duration" data-value="3095209000">3.097</td>
+              <td class="duration" data-value="6190418000">6.190</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Efectura.stepDefs.GeneralStepDefs.theUserSelectEmreUzunAsSalesRep(java.lang.String)</td>
+              <td>3</td>
+              <td class="duration" data-value="23403288700">23.403</td>
+              <td class="duration" data-value="23403288700">23.478</td>
+              <td class="duration" data-value="70209866100">1:10.209</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Efectura.stepDefs.GeneralStepDefs.theUserVerifyExplanationTestNotu(java.lang.String,java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Efectura.stepDefs.GeneralStepDefs.theUserVerifyFormInputsClear()</td>
+              <td>2</td>
+              <td class="duration" data-value="50862250">0.050</td>
+              <td class="duration" data-value="50862250">0.101</td>
+              <td class="duration" data-value="101724500">0.101</td>
+              <td class="failed">50.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Efectura.stepDefs.GeneralStepDefs.theUserVerifyMinimumValueWarning()</td>
+              <td>1</td>
+              <td class="duration" data-value="19917200">0.019</td>
+              <td class="duration" data-value="19917200">0.019</td>
+              <td class="duration" data-value="19917200">0.019</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Efectura.stepDefs.GeneralStepDefs.theUserVerifyNextButtonActive()</td>
+              <td>2</td>
+              <td class="duration" data-value="1022617450">1.022</td>
+              <td class="duration" data-value="1022617450">1.026</td>
+              <td class="duration" data-value="2045234900">2.045</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Efectura.stepDefs.GeneralStepDefs.theUserVerifyNextButtonPassive()</td>
+              <td>2</td>
+              <td class="duration" data-value="21048450">0.021</td>
+              <td class="duration" data-value="21048450">0.023</td>
+              <td class="duration" data-value="42096900">0.042</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Efectura.stepDefs.GeneralStepDefs.theUserVerifyPreviousPageButtonActive()</td>
+              <td>2</td>
+              <td class="duration" data-value="1326450100">1.326</td>
+              <td class="duration" data-value="1326450100">1.628</td>
+              <td class="duration" data-value="2652900200">2.652</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Efectura.stepDefs.GeneralStepDefs.theUserVerifyPreviousPageButtonPassive()</td>
+              <td>2</td>
+              <td class="duration" data-value="19644700">0.019</td>
+              <td class="duration" data-value="19644700">0.022</td>
+              <td class="duration" data-value="39289400">0.039</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Efectura.stepDefs.GeneralStepDefs.theUserVerifyRequiredDocuments()</td>
+              <td>1</td>
+              <td class="duration" data-value="163551516400">2:43.551</td>
+              <td class="duration" data-value="163551516400">2:43.551</td>
+              <td class="duration" data-value="163551516400">2:43.551</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Efectura.stepDefs.GeneralStepDefs.theUserVerifyReviseReason(java.lang.String,java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="5017853400">5.017</td>
+              <td class="duration" data-value="5017853400">10.021</td>
+              <td class="duration" data-value="10035706800">10.035</td>
+              <td class="failed">50.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Efectura.stepDefs.GeneralStepDefs.theUserVerifyWarning(java.lang.String)</td>
+              <td>11</td>
+              <td class="duration" data-value="949745472">0.949</td>
+              <td class="duration" data-value="949745472">1.069</td>
+              <td class="duration" data-value="10447200200">10.447</td>
+              <td class="failed">90.91%</td>
+            </tr>
+            <tr>
+              <td class="location">Efectura.stepDefs.GeneralStepDefs.theUserWaitSecond(int)</td>
+              <td>8</td>
+              <td class="duration" data-value="3757952187">3.757</td>
+              <td class="duration" data-value="3757952187">5.014</td>
+              <td class="duration" data-value="30063617500">30.063</td>
+              <td class="failed">87.50%</td>
+            </tr>
+            <tr>
+              <td class="location">Efectura.stepDefs.GeneralStepDefs.the_user_go_to_environment(java.lang.String)</td>
+              <td>39</td>
+              <td class="duration" data-value="436296828">0.436</td>
+              <td class="duration" data-value="436296828">0.960</td>
+              <td class="duration" data-value="17015576300">17.015</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Efectura.stepDefs.Hooks.setup(io.cucumber.java.Scenario)</td>
+              <td>39</td>
+              <td class="duration" data-value="914943046">0.914</td>
+              <td class="duration" data-value="914943046">7.626</td>
+              <td class="duration" data-value="35682778800">35.682</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Efectura.stepDefs.Hooks.tearDown(io.cucumber.java.Scenario)</td>
+              <td>39</td>
+              <td class="duration" data-value="1772925435">1.772</td>
+              <td class="duration" data-value="1772925435">2.094</td>
+              <td class="duration" data-value="69144092000">1:9.144</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Efectura.stepDefs.SearchStepDefs.theUserClickCreateDateResetButton()</td>
+              <td>2</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Efectura.stepDefs.SearchStepDefs.theUserClickCreateDateSortButton()</td>
+              <td>2</td>
+              <td class="duration" data-value="3092934000">3.092</td>
+              <td class="duration" data-value="3092934000">3.126</td>
+              <td class="duration" data-value="6185868000">6.185</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Efectura.stepDefs.SearchStepDefs.theUserClickCreateNewRecordButton()</td>
+              <td>6</td>
+              <td class="duration" data-value="56064816">0.056</td>
+              <td class="duration" data-value="56064816">0.072</td>
+              <td class="duration" data-value="336388900">0.336</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Efectura.stepDefs.SearchStepDefs.theUserClickDealStatusResetButton()</td>
+              <td>1</td>
+              <td class="duration" data-value="87597500">0.087</td>
+              <td class="duration" data-value="87597500">0.087</td>
+              <td class="duration" data-value="87597500">0.087</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Efectura.stepDefs.SearchStepDefs.theUserClickRelatedRecordButtonAtRow(int)</td>
+              <td>12</td>
+              <td class="duration" data-value="64577908">0.064</td>
+              <td class="duration" data-value="64577908">0.095</td>
+              <td class="duration" data-value="774934900">0.774</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Efectura.stepDefs.SearchStepDefs.theUserEnterSenaToSearchInput(java.lang.String)</td>
+              <td>7</td>
+              <td class="duration" data-value="2146815028">2.146</td>
+              <td class="duration" data-value="2146815028">2.205</td>
+              <td class="duration" data-value="15027705200">15.027</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Efectura.stepDefs.SearchStepDefs.theUserFillAndSaveTheForm()</td>
+              <td>5</td>
+              <td class="duration" data-value="112685114540">1:52.685</td>
+              <td class="duration" data-value="112685114540">1:55.352</td>
+              <td class="duration" data-value="563425572700">9:23.425</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Efectura.stepDefs.SearchStepDefs.theUserFillTheFormPartially()</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Efectura.stepDefs.SearchStepDefs.theUserFillTheLeadForm()</td>
+              <td>2</td>
+              <td class="duration" data-value="20550032850">20.550</td>
+              <td class="duration" data-value="20550032850">41.100</td>
+              <td class="duration" data-value="41100065700">41.100</td>
+              <td class="failed">50.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Efectura.stepDefs.SearchStepDefs.theUserFillTheProspectForm()</td>
+              <td>3</td>
+              <td class="duration" data-value="68699541033">1:8.699</td>
+              <td class="duration" data-value="68699541033">1:43.305</td>
+              <td class="duration" data-value="206098623100">3:26.098</td>
+              <td class="failed">66.67%</td>
+            </tr>
+            <tr>
+              <td class="location">Efectura.stepDefs.SearchStepDefs.theUserFillTheProspectFormWithInvalidMailAndPhone()</td>
+              <td>1</td>
+              <td class="duration" data-value="102988465900">1:42.988</td>
+              <td class="duration" data-value="102988465900">1:42.988</td>
+              <td class="duration" data-value="102988465900">1:42.988</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Efectura.stepDefs.SearchStepDefs.theUserSelectDateFilter(int,int,int)</td>
+              <td>5</td>
+              <td class="duration" data-value="11060970960">11.060</td>
+              <td class="duration" data-value="11060970960">11.155</td>
+              <td class="duration" data-value="55304854800">55.304</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Efectura.stepDefs.SearchStepDefs.theUserSelectOptionInSelectElement(java.lang.String,java.lang.String)</td>
+              <td>11</td>
+              <td class="duration" data-value="16194159245">16.194</td>
+              <td class="duration" data-value="16194159245">20.613</td>
+              <td class="duration" data-value="178135751700">2:58.135</td>
+              <td class="failed">90.91%</td>
+            </tr>
+            <tr>
+              <td class="location">Efectura.stepDefs.SearchStepDefs.theUserSelectProspectInDealStatusFilter(java.lang.String)</td>
+              <td>17</td>
+              <td class="duration" data-value="1899678805">1.899</td>
+              <td class="duration" data-value="1899678805">10.778</td>
+              <td class="duration" data-value="32294539700">32.294</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Efectura.stepDefs.SearchStepDefs.theUserUploadDocuments()</td>
+              <td>1</td>
+              <td class="duration" data-value="1168652600">1.168</td>
+              <td class="duration" data-value="1168652600">1.168</td>
+              <td class="duration" data-value="1168652600">1.168</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Efectura.stepDefs.SearchStepDefs.theUserVerifyCreateDateAscendingSort()</td>
+              <td>1</td>
+              <td class="duration" data-value="135630000">0.135</td>
+              <td class="duration" data-value="135630000">0.135</td>
+              <td class="duration" data-value="135630000">0.135</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Efectura.stepDefs.SearchStepDefs.theUserVerifyCreateDateDescendingSort()</td>
+              <td>1</td>
+              <td class="duration" data-value="85588000">0.085</td>
+              <td class="duration" data-value="85588000">0.085</td>
+              <td class="duration" data-value="85588000">0.085</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Efectura.stepDefs.SearchStepDefs.theUserVerifyCreateDateFilter(int,int,int)</td>
+              <td>3</td>
+              <td class="duration" data-value="332866">0.000</td>
+              <td class="duration" data-value="332866">0.000</td>
+              <td class="duration" data-value="998600">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Efectura.stepDefs.SearchStepDefs.theUserVerifyDealStatusFilterWithProspect(java.lang.String)</td>
+              <td>4</td>
+              <td class="duration" data-value="102416150">0.102</td>
+              <td class="duration" data-value="102416150">0.187</td>
+              <td class="duration" data-value="409664600">0.409</td>
+              <td class="failed">75.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Efectura.stepDefs.SearchStepDefs.theUserVerifyFormIsOpen(java.lang.String)</td>
+              <td>17</td>
+              <td class="duration" data-value="2376612464">2.376</td>
+              <td class="duration" data-value="2376612464">12.018</td>
+              <td class="duration" data-value="40402411900">40.402</td>
+              <td class="failed">82.35%</td>
+            </tr>
+            <tr>
+              <td class="location">Efectura.stepDefs.SearchStepDefs.theUserVerifyInvalidEmailAndPhoneWarning()</td>
+              <td>1</td>
+              <td class="duration" data-value="28718300">0.028</td>
+              <td class="duration" data-value="28718300">0.028</td>
+              <td class="duration" data-value="28718300">0.028</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Efectura.stepDefs.SearchStepDefs.theUserVerifyOldValues()</td>
+              <td>1</td>
+              <td class="duration" data-value="87389800">0.087</td>
+              <td class="duration" data-value="87389800">0.087</td>
+              <td class="duration" data-value="87389800">0.087</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Efectura.stepDefs.SearchStepDefs.theUserVerifyOtherAttributesDisplay()</td>
+              <td>4</td>
+              <td class="duration" data-value="115950650">0.115</td>
+              <td class="duration" data-value="115950650">0.173</td>
+              <td class="duration" data-value="463802600">0.463</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Efectura.stepDefs.SearchStepDefs.theUserVerifyRecordIsCreated()</td>
+              <td>1</td>
+              <td class="duration" data-value="13885542500">13.885</td>
+              <td class="duration" data-value="13885542500">13.885</td>
+              <td class="duration" data-value="13885542500">13.885</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Efectura.stepDefs.SearchStepDefs.theUserVerifyRecordTitlesWithSena(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="108991800">0.108</td>
+              <td class="duration" data-value="108991800">0.108</td>
+              <td class="duration" data-value="108991800">0.108</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Efectura.stepDefs.SearchStepDefs.theUserVerifyResetButtonFuncForCreateDateFilter()</td>
+              <td>2</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Efectura.stepDefs.SearchStepDefs.theUserVerifyResetButtonFuncForDealStatusFilter()</td>
+              <td>1</td>
+              <td class="duration" data-value="40189500">0.040</td>
+              <td class="duration" data-value="40189500">0.040</td>
+              <td class="duration" data-value="40189500">0.040</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Efectura.stepDefs.SearchStepDefs.theUserVerifyTableNoResult()</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Efectura.stepDefs.SearchStepDefs.theUserVerifyTableNoResultForCreatedCase()</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Efectura.stepDefs.SearchStepDefs.theUserVerifyTableWithRecord()</td>
+              <td>2</td>
+              <td class="duration" data-value="11547285250">11.547</td>
+              <td class="duration" data-value="11547285250">23.094</td>
+              <td class="duration" data-value="23094570500">23.094</td>
+              <td class="failed">50.00%</td>
+            </tr>
+        </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>59</td>
+            <td>373</td>
+            <td class="duration">5.783</td>
+            <td class="duration">9:23.425</td>
+            <td class="duration">35:57.339</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>
